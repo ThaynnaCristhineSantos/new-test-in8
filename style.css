@@ -107,18 +107,18 @@ li svg.circle-nav {
   font-family: 'Helvetica UltraLight';
   color: #ffffff;
 
-  padding-left: 20rem;
+  padding-left: 34rem;
   padding-top: 18rem;
 }
 
 .content h1 {
   font-weight: 200;
-  font-size: 8.3rem;
+  font-size: 8rem;
 }
 
 .content p {
   font-weight: 200;
-  font-size: 3.5rem;
+  font-size: 3.3rem;
 }
 
 .mobile-menu {
@@ -152,8 +152,8 @@ li svg.circle-nav {
   }
 
   .nav-list li {
-    margin-left: 0;
-    opacity: 0;
+    display: grid;
+    grid-template-columns: 1fr;
   }
 
   .nav-list.active{
@@ -175,15 +175,13 @@ li svg.circle-nav {
     position: relative;
     display: block;
     z-index: 100;
-    padding-left: 4.2rem;
-    padding-top: 4.2rem;
-    
+    padding-left: 4.5rem;
+    padding-top: 4.2rem; 
   }
 
   .content {
-
-    padding-right: 1;
-    padding-top: 8.8rem;
+    padding-top: 5rem;
+    padding-left: 10rem;
   }
   
   .content h1 {
@@ -197,9 +195,14 @@ li svg.circle-nav {
   }
   
   .logo{
-    padding-left: -50rem;
+    padding-right: 7rem;
+  }
+
+  .circle-nav {
+    display: none;
   }
 }
+
 
 
 
