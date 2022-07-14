@@ -21,8 +21,7 @@
 * {
   margin: 0;
   padding: 0;
-  margin-right: auto;
-  margin-right: auto;
+  box-sizing: border-box;
 }
 
 :root {
@@ -37,6 +36,22 @@
 
 body{
   overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+
+header {
+  margin-right: auto;
+  margin-right: auto;
 }
 
 a,
@@ -117,11 +132,6 @@ li svg.circle-nav {
 }
 
 @media (max-width: 999px) {
-
-  body{
-    overflow-x: hidden;
-  }
-
   main {
     background-image: url(./assets/index-image-mobile\ 1.png);
     background-size: contain;
@@ -167,11 +177,30 @@ li svg.circle-nav {
     z-index: 100;
     padding-left: 4.2rem;
     padding-top: 4.2rem;
-    padding-bottom: 3.4rem;
+    
   }
 
+  .content {
+
+    padding-right: 1;
+    padding-top: 8.8rem;
+  }
   
+  .content h1 {
+    font-weight: 200;
+    font-size: 6rem;
+  }
+  
+  .content p {
+    font-weight: 200;
+    font-size: 2.5rem;
+  }
+  
+  .logo{
+    padding-left: -50rem;
+  }
 }
+
 
 
 
