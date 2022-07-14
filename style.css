@@ -42,14 +42,8 @@ html {
   scroll-behavior: smooth;
 }
 
-html,
-body {
-  width: 100%;
-  height: 100%;
-}
-
-
-header {
+header,
+section {
   margin-right: auto;
   margin-right: auto;
 }
@@ -84,10 +78,11 @@ nav {
 
 main {
   width: min(137.7, 100%);
-  height: 70.8rem;
+  height:69rem;
   background-image: url(./assets/index-image\ 1.png);
   background-size: contain;
   background-repeat: no-repeat;
+  padding-bottom: 0;
  
 }
 .nav-list {
@@ -96,11 +91,6 @@ main {
 
 .nav-list li {
   margin-left: 3.2rem;
-}
-
-li svg.circle-nav {
-  display: flex;
-  justify-content: space-around;
 }
 
 .content {
@@ -131,6 +121,105 @@ li svg.circle-nav {
   cursor: pointer;
 }
 
+/*=== REGISTRATION ======================================*/
+
+#registration {
+  position: relative;
+  width: min(137.7rem, 100%);
+  height: 63.9rem;
+  background: var(--blue-ligth);
+  padding-top: 0;
+}
+
+h2 {
+  font-family: 'Helvetica UltraLight';
+  font-weight: 200;
+  font-size: 5.3rem;
+  line-height: 10rem;
+
+  padding-top: 5rem;
+  padding-left: 54.7rem;
+  margin-bottom: 4.5rem;
+
+  color: #ffff;
+}
+
+button {
+  background: var(--dark-blue);
+  font-family: 'Helvetica UltraLight';
+  font-weight: 200;
+  font-size: 3.7rem;
+  line-height: 4.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+
+  color: var(--blue-ligth);
+
+  padding: 1.6rem 3.2rem;
+  position: absolute;
+  margin-left: 54.9rem;
+  margin-top: 30.5rem;
+  
+}
+
+button:hover {
+  background: var(--blue-ligth);
+  color: var(--dark-blue);
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+/*=== FORM-REGISTRATION ======================================*/
+.input-box {
+  color: #fff;
+  position: absolute;
+  padding-left: 43.6rem;
+  padding-bottom: 22.7rem;
+}
+
+label {
+  position: relative;
+  font-family: 'Roboto Regular';
+  font-style: regular;
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+  color: #fff;
+}
+
+.input-registration {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+
+  font-family: 'Helvetica Condensed Regular';
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #fff;
+
+  width: 51.6rem;
+  margin-bottom: 1.5rem;
+  padding: 1;
+}
+
+.input-registration:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px var(--blue-ligth) inset;
+  -webkit-text-fill-color: #fff !important;
+}
+
+.label-input {
+  position:relative;
+  top: -0.8rem;
+}
+
+.input-registration,
+.label-input {
+  display: block;
+  align-items: center;
+}
+
 @media (max-width: 999px) {
   main {
     background-image: url(./assets/index-image-mobile\ 1.png);
@@ -141,8 +230,8 @@ li svg.circle-nav {
   .nav-list {
     position: absolute;
     margin-left: -20rem;
-    width: 24rem;
-    height: 46rem;
+    width: 27rem;
+    height: 44rem;
     background: var(--blue-ligth);
     align-items: center;
     flex-direction: column-reverse;
@@ -201,6 +290,39 @@ li svg.circle-nav {
   .circle-nav {
     display: none;
   }
+
+  /*=== REGISTRATION ======================================*/
+
+  #registration {
+    position: absolute;
+    width: min(137.7rem, 100%);
+    height: 52.5rem;
+  }
+
+  h2 {
+    font-size: 3.7rem;
+    line-height: 4.5rem;
+    padding-top: 2.9rem;
+    padding-left: 9.2rem;
+    margin-bottom: 3.5rem;
+  }
+
+  button {
+    padding-left: 3.3rem;
+    margin-bottom: 5.5rem; 
+  }
+  /*=== FORM-REGISTRATION ======================================*/
+  .input-box {
+    color: #fff;
+    position: absolute;
+    padding-left: 5rem;
+    padding-bottom: 5.7rem;
+  }
+
+  .input-registration {
+    width: 29rem;
+  }
+  
 }
 
 
