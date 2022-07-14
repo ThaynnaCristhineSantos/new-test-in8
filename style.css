@@ -102,11 +102,13 @@ main {
 }
 
 .content h1 {
+  padding-top: 20rem;
   font-weight: 200;
   font-size: 8rem;
 }
 
 .content p {
+  padding-top: 30rem;
   font-weight: 200;
   font-size: 3.3rem;
 }
@@ -220,6 +222,145 @@ label {
   align-items: center;
 }
 
+/*=== REGISTRATION LIST======================================*/
+
+#registration-list {
+  position: relative;
+  width: min(137.7rem, 100%);
+}
+
+#registration-list h2 {
+  font-family: 'Helvetica UltraLight';
+  font-weight: 200;
+  font-size: 5.3rem;
+  line-height: 10rem;
+
+  color: var(--blue-ligth);
+
+  padding-top: 3.7rem;
+  padding-left: 42.4rem;
+  margin-bottom: 4.5rem;
+}
+
+/*=== TABLE ======================================*/
+.content {
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  padding-top: 2rem;
+}
+
+table {
+  position: relative;
+  width: 93rem;
+  height: 25.5rem;
+}
+
+.head-table {
+  font-family: 'Roboto Regular', sans-serif;
+  font-size: 1.5rem;
+  color: var(--dark-blue);
+}
+
+thead th {
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  border-collapse: collapse;
+  border-bottom: 1px solid var(--blue-ligth);
+  border-left: 1px solid var(--blue-ligth);
+
+  border-collapse: collapse;
+  
+  
+}
+
+thead th:nth-child(1){
+  border-left: none;
+  
+}
+
+tr td {
+  font-family: Helvetica, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 200;
+
+  text-align: center;
+
+  color: var(--gray);
+
+  border-bottom: 1px solid var(--blue-ligth);
+  border-left: 1px solid var(--blue-ligth);
+}
+
+tr td:nth-child(1) {
+  border-left: none;
+}
+
+
+.body-table .line-table {
+  border-bottom: 1px solid var(--blue-ligth);
+  border-width: 100%;
+}
+
+.body-table .line-table:nth-child(1) {
+  border-left:none
+}
+
+.body-table .line-table td:nth-child(1) {
+  width: 10%;
+  
+}
+.body-table .line-table td:nth-child(2) {
+  width: 25%;
+}
+.body-table .line-table td:nth-child(3) {
+  width: 33%;
+}
+.body-table .line-table td:nth-child(4) {
+  width: 15%;
+}
+
+.body-table .line-table td:nth-child(5) {
+  width: 27%;
+}
+
+
+
+
+/*=== FOOTER ======================================*/
+
+footer {
+  position: relative;
+  width: min(137.7rem, 100%);
+  height: 24.4rem;
+  left: 0;
+  margin-top: 6rem;
+  
+  background-image: url(./assets/rodape-desktop.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+footer p {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  font-weight: 300;
+
+  color: var(--gray);
+  
+  display: flex;
+  justify-content: center;
+  
+  padding-bottom: 1rem;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  padding-top: 6rem;
+}
+
 @media (max-width: 999px) {
   main {
     background-image: url(./assets/index-image-mobile\ 1.png);
@@ -294,12 +435,11 @@ label {
   /*=== REGISTRATION ======================================*/
 
   #registration {
-    position: absolute;
-    width: min(137.7rem, 100%);
+    width: min(37.5rem, 100%);
     height: 52.5rem;
   }
 
-  h2 {
+  #registration h2 {
     font-size: 3.7rem;
     line-height: 4.5rem;
     padding-top: 2.9rem;
@@ -308,9 +448,11 @@ label {
   }
 
   button {
+    display: block;
     padding-left: 3.3rem;
     margin-bottom: 5.5rem; 
   }
+  
   /*=== FORM-REGISTRATION ======================================*/
   .input-box {
     color: #fff;
@@ -322,6 +464,73 @@ label {
   .input-registration {
     width: 29rem;
   }
+
+  /*=== REGISTRATION LIST======================================*/
+
+#registration-list {
+  width: min(37.5rem, 100%);
+  height: 37.3rem;
+}
+
+#registration-list h2 {
+  font-size: 3.7rem;
+  line-height: 4rem;
+  padding-top: 3.7rem;
+  padding-left: 8.9rem;
+  margin-bottom: 1.5rem;
+}
+
+/*=== TABLE ======================================*/
+.content {
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  position: relative;
+  width: 32.6rem;
+  height: 18.6rem;
+
+  border-collapse: collapse;
+}
+
+
+
+
+/*=== FOOTER ======================================*/
+
+footer {
+  position: relative;
+  width: min(137.7rem, 100%);
+  height: 24.4rem;
+  left: 0;
+  margin-top: 6rem;
+  
+  background-image: url(./assets/rodape-desktop.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+footer p {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  font-weight: 300;
+
+  color: var(--gray);
+  
+  display: flex;
+  justify-content: center;
+  
+  padding-bottom: 1rem;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  padding-top: 6rem;
+}
+  
   
 }
 
