@@ -2,7 +2,7 @@
   $dbHost = 'localhost';
   $dbUserName = 'hoot';
   $dbPassword = '';
-  $dbName ='registration';
+  $dbName ='registrations';
 
   $conexão = new mysqli($dbHost,$dbUserName,$dbPassword,$dbName)
   if ($conexão->connect_ernno)
