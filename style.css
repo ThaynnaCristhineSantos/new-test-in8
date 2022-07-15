@@ -489,6 +489,7 @@ footer p {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 0rem;
   }
 
   li {
@@ -497,9 +498,9 @@ footer p {
 
   ul.nav-list {
     margin: 0;
-    margin-top: 5rem;
+    margin-top: 1rem;
     padding-left: 5rem;
-    padding-bottom: 45rem;
+    padding-bottom: 0;
 
   }
 
@@ -520,19 +521,21 @@ footer p {
   .mobile-menu {
     display: none;
   }
+  
   a.logo {
     display: block;
     margin-top: 10rem;
   }
   
   .content {
-    margin: auto;
+    margin: 0;
     font-family: 'Helvetica UltraLight';
     color: #ffffff;
     display: flex;
     flex-direction: column;
-
-    padding-bottom: 53rem;
+    display: block;
+    margin-top: 17.5rem;
+    padding-bottom: 22rem;
   }
   
   .content h1 {
