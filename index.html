@@ -1,3 +1,12 @@
+<?php 
+  if (isset($_POST['submit']))
+  {
+    print_r($_POST['name'])
+    print_r($_POST['email'])
+    print_r($_POST['tel'])
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -154,7 +163,7 @@
       <h2>CADASTRO</h2>
       <div class="box-resistration">
         <div class="input-box">
-          <form action="" method="post">
+          <form action="index.php" method="POST">
             <div class="box">
               <label for="name" class="label-input">Nome</label>
               <input
@@ -202,7 +211,7 @@
           </form>
         </div>
       </div>
-      <button onclick="name.registration()" class="button" >CADASTRAR</button>
+      <button class="button" type="submit" name = "submit" id="submit" >CADASTRAR</button>
     </section>
 
     <section id="registration-list">
