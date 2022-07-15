@@ -1,0 +1,585 @@
+@font-face {
+  font-family: 'Helvetica UltraLight' ;
+  src: url(HelveticaNeue-UltraLight.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Helvetica Condensed Regular';
+  src: url(Helvetica\ Condensed\ Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto Ligth';
+  src: url(Roboto-Light.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto Regular';
+  src: url(Roboto-Regular.ttf) format('truetype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --blue-ligth: #29abe2;
+  --dark-blue: #012d51;
+  --gray: #808080;
+
+  font-size: 62.5%; /* 1rem = 10px */
+
+  --nav-height: 7.2rem;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header,
+section {
+  margin-right: auto;
+  margin-right: auto;
+}
+
+a,
+ul {
+  font-family: 'Roboto Regular';
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 3.5rem;
+  margin-left: 20rem;
+  color: #ffff;
+  text-decoration: none;
+  transition: 0.3s;
+  list-style: none;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 8vh;
+  
+}
+
+main {
+  width: min(137.7, 100%);
+  height:69rem;
+  background-image: url(./assets/index-image\ 1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-bottom: 0;
+ 
+}
+.nav-list {
+  display: flex;
+}
+
+.nav-list li {
+  margin-left: 3.2rem;
+}
+
+.content {
+  font-family: 'Helvetica UltraLight';
+  color: #ffffff;
+
+  padding-left: 34rem;
+  padding-top: 18rem;
+}
+
+.content h1 {
+  padding-top: 20rem;
+  font-weight: 200;
+  font-size: 8rem;
+}
+
+.content p {
+  padding-top: 30rem;
+  font-weight: 200;
+  font-size: 3.3rem;
+}
+
+.mobile-menu {
+  cursor: pointer;
+  display: none;
+}
+
+.moblie-menu-close {
+  display: none;
+  cursor: pointer;
+}
+
+/*=== REGISTRATION ======================================*/
+
+#registration {
+  position: relative;
+  width: min(137.7rem, 100%);
+  height: 63.9rem;
+  background: var(--blue-ligth);
+  padding-top: 0;
+}
+
+h2 {
+  font-family: 'Helvetica UltraLight';
+  font-weight: 200;
+  font-size: 5.3rem;
+  line-height: 10rem;
+
+  padding-top: 5rem;
+  padding-left: 54.7rem;
+  margin-bottom: 4.5rem;
+
+  color: #ffff;
+}
+
+button {
+  background: var(--dark-blue);
+  font-family: 'Helvetica UltraLight';
+  font-weight: 200;
+  font-size: 3.7rem;
+  line-height: 4.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+
+  color: var(--blue-ligth);
+
+  padding: 1.6rem 3.2rem;
+  position: absolute;
+  margin-left: 54.9rem;
+  margin-top: 30.5rem;
+  
+}
+
+button:hover {
+  background: var(--blue-ligth);
+  color: var(--dark-blue);
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+/*=== FORM-REGISTRATION ======================================*/
+.input-box {
+  color: #fff;
+  position: absolute;
+  padding-left: 43.6rem;
+  padding-bottom: 22.7rem;
+}
+
+label {
+  position: relative;
+  font-family: 'Roboto Regular';
+  font-style: regular;
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+  color: #fff;
+}
+
+.input-registration {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+
+  font-family: 'Helvetica Condensed Regular';
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #fff;
+
+  width: 51.6rem;
+  margin-bottom: 1.5rem;
+  padding: 1;
+}
+
+.input-registration:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px var(--blue-ligth) inset;
+  -webkit-text-fill-color: #fff !important;
+}
+
+.label-input {
+  position:relative;
+  top: -0.8rem;
+}
+
+.input-registration,
+.label-input {
+  display: block;
+  align-items: center;
+}
+
+/*=== REGISTRATION LIST======================================*/
+
+#registration-list {
+  position: relative;
+  width: min(137.7rem, 100%);
+}
+
+#registration-list h2 {
+  font-family: 'Helvetica UltraLight';
+  font-weight: 200;
+  font-size: 5.3rem;
+  line-height: 10rem;
+
+  color: var(--blue-ligth);
+
+  padding-top: 3.7rem;
+  padding-left: 42.4rem;
+  margin-bottom: 4.5rem;
+}
+
+/*=== TABLE ======================================*/
+.content {
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  padding-top: 2rem;
+}
+
+table {
+  position: relative;
+  width: 93rem;
+  height: 25.5rem;
+}
+
+.head-table {
+  font-family: 'Roboto Regular', sans-serif;
+  font-size: 1.5rem;
+  color: var(--dark-blue);
+}
+
+thead th {
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  border-collapse: collapse;
+  border-bottom: 1px solid var(--blue-ligth);
+  border-left: 1px solid var(--blue-ligth);
+
+  border-collapse: collapse;
+  
+  
+}
+
+thead th:nth-child(1){
+  border-left: none;
+  
+}
+
+tr td {
+  font-family: Helvetica, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 200;
+
+  text-align: center;
+
+  color: var(--gray);
+
+  border-bottom: 1px solid var(--blue-ligth);
+  border-left: 1px solid var(--blue-ligth);
+}
+
+tr td:nth-child(1) {
+  border-left: none;
+}
+
+
+.body-table .line-table {
+  border-bottom: 1px solid var(--blue-ligth);
+  border-width: 100%;
+}
+
+.body-table .line-table:nth-child(1) {
+  border-left:none
+}
+
+.body-table .line-table td:nth-child(1) {
+  width: 10%;
+  
+}
+.body-table .line-table td:nth-child(2) {
+  width: 25%;
+}
+.body-table .line-table td:nth-child(3) {
+  width: 33%;
+}
+.body-table .line-table td:nth-child(4) {
+  width: 15%;
+}
+
+.body-table .line-table td:nth-child(5) {
+  width: 27%;
+}
+
+
+
+
+/*=== FOOTER ======================================*/
+
+footer {
+  position: relative;
+  width: min(137.7rem, 100%);
+  height: 24.4rem;
+  left: 0;
+  margin-top: 6rem;
+  
+  background-image: url(./assets/rodape-desktop.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+footer p {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  font-weight: 300;
+
+  color: var(--gray);
+  
+  display: flex;
+  justify-content: center;
+  
+  padding-bottom: 1rem;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  padding-top: 6rem;
+}
+
+@media (max-width: 999px) {
+  main {
+    background-image: url(./assets/index-image-mobile\ 1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  .nav-list {
+    position: absolute;
+    margin-left: -20rem;
+    width: 27rem;
+    height: 44rem;
+    background: var(--blue-ligth);
+    align-items: center;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    transform: translateX(-100%);
+    transition: transform .3s ease-in;                              
+  }
+
+  .nav-list li {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .nav-list.active{
+    transform: translateX(0);
+  }
+
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(5rem); /*transação li*/
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0); /*transação li*/
+    }
+  }
+
+  .mobile-menu {
+    position: relative;
+    display: block;
+    z-index: 100;
+    padding-left: 4.5rem;
+    padding-top: 4.2rem; 
+  }
+
+  .content {
+    padding-top: 5rem;
+    padding-left: 10rem;
+  }
+  
+  .content h1 {
+    font-weight: 200;
+    font-size: 6rem;
+  }
+  
+  .content p {
+    font-weight: 200;
+    font-size: 2.5rem;
+  }
+  
+  .logo{
+    padding-right: 7rem;
+  }
+
+  .circle-nav {
+    display: none;
+  }
+
+  /*=== REGISTRATION ======================================*/
+
+  #registration {
+    width: min(37.5rem, 100%);
+    height: 52.5rem;
+  }
+
+  #registration h2 {
+    font-size: 3.7rem;
+    line-height: 4.5rem;
+    padding-top: 2.9rem;
+    padding-left: 9.2rem;
+    margin-bottom: 3.5rem;
+  }
+
+  button {
+    display: block;
+    padding-left: 3.3rem;
+    margin-bottom: 5.5rem; 
+  }
+  
+  /*=== FORM-REGISTRATION ======================================*/
+  .input-box {
+    color: #fff;
+    position: absolute;
+    padding-left: 5rem;
+    padding-bottom: 5.7rem;
+  }
+
+  .input-registration {
+    width: 29rem;
+    
+  }
+
+  /*=== REGISTRATION LIST======================================*/
+
+#registration-list {
+  width: min(37.5rem, 100%);
+  height: 37.3rem;
+}
+
+#registration-list h2 {
+  font-size: 3.7rem;
+  line-height: 4rem;
+  padding-top: 3.7rem;
+  padding-left: 8.9rem;
+  margin-bottom: 1.5rem;
+}
+
+/*=== TABLE ======================================*/
+.content {
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  position: relative;
+  width: 32.6rem;
+  height: 18.6rem;
+
+  border-collapse: collapse;
+}
+
+.head-table {
+
+}
+
+thead th {
+  
+  
+}
+
+
+tr td {
+  
+}
+
+
+
+
+.body-table .line-table {
+  border-bottom: 1px solid var(--blue-ligth);
+  border-width: 100%;
+}
+
+.body-table .line-table:nth-child(1) {
+  border-left:none
+}
+
+.body-table .line-table td:nth-child(1) {
+  width: 10%;
+  
+}
+.body-table .line-table td:nth-child(2) {
+  width: 25%;
+}
+.body-table .line-table td:nth-child(3) {
+  width: 33%;
+}
+.body-table .line-table td:nth-child(4) {
+  width: 15%;
+}
+
+.body-table .line-table td:nth-child(5) {
+  width: 27%;
+}
+
+
+
+
+/*=== FOOTER ======================================*/
+
+footer {
+  position: relative;
+  width: min(137.7rem, 100%);
+  height: 24.4rem;
+  left: 0;
+  margin-top: 6rem;
+  
+  background-image: url(./assets/rodape-desktop.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+footer p {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  font-weight: 300;
+
+  color: var(--gray);
+  
+  display: flex;
+  justify-content: center;
+  
+  padding-bottom: 1rem;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  padding-top: 6rem;
+}
+  
+  
+}
+
+
+
+
+

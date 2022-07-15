@@ -23,7 +23,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 :root {
   --blue-ligth: #29abe2;
   --dark-blue: #012d51;
@@ -40,27 +39,26 @@ body{
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
-header,
-section {
-  margin-right: auto;
-  margin-right: auto;
+
+/*=== HOME ======================================*/
+header {
+  margin-top: 0;
 }
 
 a,
 ul {
   font-family: 'Roboto Regular';
   font-size: 1.6rem;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   margin-top: 3.5rem;
-  margin-left: 20rem;
+  margin-left: 13rem;
   color: #ffff;
   text-decoration: none;
   transition: 0.3s;
   list-style: none;
+  display: block;
 }
 
 a:hover {
@@ -69,80 +67,114 @@ a:hover {
 
 nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   font-family: Arial, Helvetica, sans-serif;
-  height: 8vh;
+  margin-top: -27rem;
   
 }
 
 main {
-  width: min(137.7, 100%);
-  height:69rem;
-  background-image: url(./assets/index-image\ 1.png);
-  background-size: contain;
+  min-width: 337px;
+  max-width: 780px;
+  margin: auto;
+  height:57.1rem;
+  background-image: url(./assets/index-image-mobile\ 1.png);
+  background-size: cover;
   background-repeat: no-repeat;
-  padding-bottom: 0;
- 
-}
-.nav-list {
+
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.nav-list li {
-  margin-left: 3.2rem;
+
+.nav-list {
+  position: absolute;
+  width: 22rem;
+  height: 38rem;
+  background: var(--blue-ligth);
+  top:-1;
+  margin-left: 17rem;
+  
+  transform: translateX(-266%);
+  transition: transform .3s ease-in;
+  
 }
 
-.content {
-  font-family: 'Helvetica UltraLight';
-  color: #ffffff;
-
-  padding-left: 34rem;
-  padding-top: 18rem;
+.nav-list.active{
+  transform: translateX(-100%);
 }
 
-.content h1 {
-  padding-top: 20rem;
-  font-weight: 200;
-  font-size: 8rem;
-}
-
-.content p {
-  padding-top: 30rem;
-  font-weight: 200;
-  font-size: 3.3rem;
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(5rem); /*transação li*/
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /*transação li*/
+  }
 }
 
 .mobile-menu {
-  cursor: pointer;
-  display: none;
-}
-
-.moblie-menu-close {
-  display: none;
+  z-index: 100;
+  padding-top: 1rem;
+  margin-left: 1rem;
+  
   cursor: pointer;
 }
 
-/*=== REGISTRATION ======================================*/
-
-#registration {
-  position: relative;
-  width: min(137.7rem, 100%);
-  height: 63.9rem;
-  background: var(--blue-ligth);
-  padding-top: 0;
-}
-
-h2 {
+.content {
+  margin: auto;
   font-family: 'Helvetica UltraLight';
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.content h1 {
+  padding-top: 4rem;
+  padding-left: 3rem;
   font-weight: 200;
-  font-size: 5.3rem;
-  line-height: 10rem;
+  font-size: 6rem;
+}
 
-  padding-top: 5rem;
-  padding-left: 54.7rem;
-  margin-bottom: 4.5rem;
+.content p {
+  padding-top: rem;
+  padding-left: 3rem;
+  font-weight: 200;
+  font-size: 2.5rem;
+}
 
+.logo{
+  
+}
+
+.circle-nav {
+  display: none;
+}
+
+section#registration {
+  min-width: 337px;
+  max-width: 780px;
+  top: 0;
+  height:52.1rem;
+  background-color: var(--blue-ligth);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+#registration h2 {
+  font-family: 'Helvetica UltraLight';
+  font-size: 3.7rem;
+  line-height: 4.5rem;
+  padding-top: 2rem;
+  margin-bottom: 3.5rem;
   color: #ffff;
 }
 
@@ -159,10 +191,7 @@ button {
   color: var(--blue-ligth);
 
   padding: 1.6rem 3.2rem;
-  position: absolute;
-  margin-left: 54.9rem;
-  margin-top: 30.5rem;
-  
+  margin-top: 3rem;
 }
 
 button:hover {
@@ -174,20 +203,20 @@ button:hover {
 
 /*=== FORM-REGISTRATION ======================================*/
 .input-box {
-  color: #fff;
-  position: absolute;
-  padding-left: 43.6rem;
-  padding-bottom: 22.7rem;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 label {
-  position: relative;
   font-family: 'Roboto Regular';
   font-style: regular;
   font-weight: 400;
   font-size: 1.3rem;
   line-height: 1.5rem;
   color: #fff;
+
 }
 
 .input-registration {
@@ -201,105 +230,71 @@ label {
   font-weight: 400;
   color: #fff;
 
-  width: 51.6rem;
+  width: 25rem;
   margin-bottom: 1.5rem;
-  padding: 1;
 }
 
 .input-registration:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 30px var(--blue-ligth) inset;
+  -webkit-box-shadow: 0 0 0 10px var(--blue-ligth) inset;
   -webkit-text-fill-color: #fff !important;
-}
-
-.label-input {
-  position:relative;
-  top: -0.8rem;
 }
 
 .input-registration,
 .label-input {
-  display: block;
-  align-items: center;
+  display: flex;
+  align-items: flex-start;
+  gap: 1px;
+
+  position: relative;
 }
 
-/*=== REGISTRATION LIST======================================*/
-
-#registration-list {
-  position: relative;
-  width: min(137.7rem, 100%);
+/*=== TABLE ======================================*/
+section#registration-list {
+  min-width: 337px;
+  max-width: 780px;
+  display: block;
+  align-items: center;
+  margin: auto;
+  top: 0;
+  height:30rem;
 }
 
 #registration-list h2 {
   font-family: 'Helvetica UltraLight';
-  font-weight: 200;
-  font-size: 5.3rem;
-  line-height: 10rem;
-
+  font-size: 3.7rem;
+  line-height: 4.5rem;
   color: var(--blue-ligth);
-
-  padding-top: 3.7rem;
-  padding-left: 42.4rem;
-  margin-bottom: 4.5rem;
-}
-
-/*=== TABLE ======================================*/
-.content {
   display: flex;
   justify-content: center;
-  padding-left: 0;
-  padding-top: 2rem;
+  align-items: center;
+  padding-bottom: 4rem;
+  padding-top: 2.5rem;
 }
 
 table {
-  position: relative;
-  width: 93rem;
-  height: 25.5rem;
+  max-width: 929px;
+  display: block;
+  align-content: center;
+  border-collapse: collapse;
+  margin: auto;
+  }
+
+table, th, td {
+  border: 1px solid var(--blue-ligth);
 }
 
-.head-table {
-  font-family: 'Roboto Regular', sans-serif;
-  font-size: 1.5rem;
+table {
+  border: none;
+}
+
+th {
+  font-family: 'Roboto Regular';
   color: var(--dark-blue);
 }
 
-thead th {
-  padding-top: 1.2rem;
-  padding-bottom: 1.2rem;
-  border-collapse: collapse;
-  border-bottom: 1px solid var(--blue-ligth);
-  border-left: 1px solid var(--blue-ligth);
-
-  border-collapse: collapse;
-  
-  
-}
-
-thead th:nth-child(1){
-  border-left: none;
-  
-}
-
-tr td {
-  font-family: Helvetica, sans-serif;
-  font-size: 1.6rem;
-  font-weight: 200;
-
-  text-align: center;
-
+td {
+  font-family: 'Helvetica Condensed Regular';
   color: var(--gray);
-
-  border-bottom: 1px solid var(--blue-ligth);
-  border-left: 1px solid var(--blue-ligth);
-}
-
-tr td:nth-child(1) {
-  border-left: none;
-}
-
-
-.body-table .line-table {
-  border-bottom: 1px solid var(--blue-ligth);
-  border-width: 100%;
 }
 
 .body-table .line-table:nth-child(1) {
@@ -324,19 +319,18 @@ tr td:nth-child(1) {
   width: 27%;
 }
 
-
-
-
 /*=== FOOTER ======================================*/
 
 footer {
-  position: relative;
-  width: min(137.7rem, 100%);
-  height: 24.4rem;
-  left: 0;
-  margin-top: 6rem;
+  min-width: 337px;
+  max-width: 780px;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:26rem;
   
-  background-image: url(./assets/rodape-desktop.jpg);
+  background-image: url(./assets/rodape-mobile.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -361,180 +355,285 @@ footer p {
   padding-top: 6rem;
 }
 
-@media (max-width: 999px) {
+@media (min-width: 1024px) {
+
   main {
-    background-image: url(./assets/index-image-mobile\ 1.png);
-    background-size: contain;
-    background-repeat: no-repeat;
+    margin: 0;
+    height:67.8rem;
+    background-image: url(./assets/index-image.jpg);
+    background-size: cover;
   }
-  
-  .nav-list {
-    position: absolute;
-    margin-left: -20rem;
-    width: 27rem;
-    height: 44rem;
-    background: var(--blue-ligth);
-    align-items: center;
-    flex-direction: column-reverse;
-    justify-content: space-around;
-    transform: translateX(-100%);
-    transition: transform .3s ease-in;                              
+  ul {
+    margin: 0;
   }
 
-  .nav-list li {
-    display: grid;
-    grid-template-columns: 1fr;
+  nav {
+    height: 1;
+    margin-left: 27rem;
+    margin-bottom: 13rem;
+  }
+
+  .nav-list { 
+    position: relative;
+    width: 32rem;
+    height: 48rem;
+    background: var(--blue-ligth);
+    
+    border: 0;
+    
+    transform: translateX(100%);
   }
 
   .nav-list.active{
-    transform: translateX(0);
+    transform: translateX(-250%);
   }
 
-  @keyframes navLinkFade {
-    from {
-      opacity: 0;
-      transform: translateX(5rem); /*transação li*/
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0); /*transação li*/
-    }
+  .content{
+    padding-left: 32rem;
+  }
+  .content p {
+    padding-left: 14.5rem;
   }
 
-  .mobile-menu {
-    position: relative;
-    display: block;
-    z-index: 100;
-    padding-left: 4.5rem;
-    padding-top: 4.2rem; 
+
+  .circle-nav {
+    display: none;
+  }
+  /*=== REGISTRATION ======================================*/
+
+  section#registration {
+    min-width: 781px;
+  }
+
+  #registration h2 {
+    padding: 0;
+  }
+
+  /*=== TABLE ======================================*/
+  section#registration-list {
+    min-width: 781px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+  }
+
+  #registration-list h2 {
+    margin-top: 21rem;
   }
 
   .content {
-    padding-top: 5rem;
-    padding-left: 10rem;
+    padding: 0;
+    margin-top: 3rem;
+    margin-bottom: 21rem;
+  }
+
+  /*=== FOOTER ======================================*/
+  .description {
+    padding: 0;
+  }
+
+  footer {
+    background-image: url(./assets/rodape-desktop.jpg);
+    background-size: contain;
+  }
+} 
+
+@media (min-width: 781px){
+  header {
+    margin-top: 0;
+  }
+  
+  a,
+  ul {
+    font-family: 'Roboto Regular';
+    font-size: 1.6rem;
+    margin-top: 3.5rem;
+    margin-left: 13rem;
+    color: #ffff;
+    text-decoration: none;
+    transition: 0.3s;
+    list-style: none;
+    display: block;
+  }
+  
+  a:hover {
+    opacity: 0.7;
+  }
+  
+  main {
+    min-width: 1024px;
+    max-width: 100%;
+    margin: auto;
+    height:57.1rem;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Roboto Regular';
+  }
+  
+  
+  .nav-list {
+    position: relative;
+    display: flex;
+    
+  }
+  
+  .nav-list.active{
+    display: none;
+  }
+  
+  .mobile-menu {
+    display: none;
+  }
+  
+  .content {
+    margin: auto;
+    font-family: 'Helvetica UltraLight';
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
   }
   
   .content h1 {
+    padding-top: 4rem;
+    padding-left: 3rem;
     font-weight: 200;
     font-size: 6rem;
   }
   
   .content p {
+    padding-top: rem;
+    padding-left: 3rem;
     font-weight: 200;
     font-size: 2.5rem;
   }
   
-  .logo{
-    padding-right: 7rem;
-  }
-
+  
   .circle-nav {
-    display: none;
+    display:block; 
   }
-
-  /*=== REGISTRATION ======================================*/
-
-  #registration {
-    width: min(37.5rem, 100%);
-    height: 52.5rem;
+  
+  section#registration {
+    min-width: 1024px;
+    max-width: 100%;
   }
-
+  
   #registration h2 {
+    font-size: 5.3rem;
+    line-height: 4.5rem;
+  }
+  
+  button {
+    background: var(--dark-blue);
+    font-family: 'Helvetica UltraLight';
+    font-weight: 200;
     font-size: 3.7rem;
     line-height: 4.5rem;
-    padding-top: 2.9rem;
-    padding-left: 9.2rem;
-    margin-bottom: 3.5rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+  
+    color: var(--blue-ligth);
+  
+    padding: 1.6rem 3.2rem;
+    margin-top: 3rem;
   }
-
-  button {
-    display: block;
-    padding-left: 3.3rem;
-    margin-bottom: 5.5rem; 
+  
+  button:hover {
+    background: var(--blue-ligth);
+    color: var(--dark-blue);
+    transition: 0.2s;
+    cursor: pointer;
   }
   
   /*=== FORM-REGISTRATION ======================================*/
   .input-box {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  label {
+    font-family: 'Roboto Regular';
+    font-style: regular;
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
     color: #fff;
-    position: absolute;
-    padding-left: 5rem;
-    padding-bottom: 5.7rem;
+  
   }
-
+  
   .input-registration {
-    width: 29rem;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+  
+    font-family: 'Helvetica Condensed Regular';
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #fff;
+  
+    width: 25rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .input-registration:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 10px var(--blue-ligth) inset;
+    -webkit-text-fill-color: #fff !important;
+  }
+  
+  .input-registration,
+  .label-input {
+    display: flex;
+    align-items: flex-start;
+    gap: 1px;
+  
+    position: relative;
+  }
+  
+  /*=== TABLE ======================================*/
+  section#registration-list {
+    min-width: 1024px;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    top: 0;
+    height:40rem;
+  }
+  
+  #registration-list h2 {
+   margin: 0 auto;
   }
 
-  /*=== REGISTRATION LIST======================================*/
-
-#registration-list {
-  width: min(37.5rem, 100%);
-  height: 37.3rem;
-}
-
-#registration-list h2 {
-  font-size: 3.7rem;
-  line-height: 4rem;
-  padding-top: 3.7rem;
-  padding-left: 8.9rem;
-  margin-bottom: 1.5rem;
-}
-
-/*=== TABLE ======================================*/
-.content {
-  display: flex;
-  justify-content: center;
-}
-
-table {
-  position: relative;
-  width: 32.6rem;
-  height: 18.6rem;
-
-  border-collapse: collapse;
-}
-
-
-
-
-/*=== FOOTER ======================================*/
-
-footer {
-  position: relative;
-  width: min(137.7rem, 100%);
-  height: 24.4rem;
-  left: 0;
-  margin-top: 6rem;
+  table {
+    width: 50rem;
+    margin-bottom: 5rem;
+  }
   
-  background-image: url(./assets/rodape-desktop.jpg);
-  background-position: center;
-  background-size: cover;
-}
+  table, th, td {
+    padding-bottom: 1rem;
+    padding-top: 0.5rem;
+    margin: auto;
+    text-align: center;
+  }
 
-footer p {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 1.6rem;
-  line-height: 1.9rem;
-  font-weight: 300;
-
-  color: var(--gray);
+  /*=== FOOTER ======================================*/
   
-  display: flex;
-  justify-content: center;
-  
-  padding-bottom: 1rem;
-}
-
-.description {
-  display: flex;
-  flex-direction: column;
-  padding-top: 6rem;
-}
-  
+  footer {
+    min-width: 1024px;
+    max-width: 100%;
+    top: 0;
+    background-image: url(./assets/rodape-desktop.jpg);
+  }
   
 }
-
-
-
-
-
