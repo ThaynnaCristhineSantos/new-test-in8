@@ -147,9 +147,6 @@ main {
   font-size: 2.5rem;
 }
 
-.logo{
-  
-}
 
 .circle-nav {
   display: none;
@@ -366,26 +363,45 @@ footer p {
   ul {
     margin: 0;
   }
-
+  header {
+    width: 100%;
+  }
   nav {
     height: 1;
-    margin-left: 27rem;
-    margin-bottom: 13rem;
+    margin-left: 28rem;
+    margin-top: 8rem;
+    margin-bottom: 1rem;
+    margin-right: 12rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
+  .logo {
+    margin: 0;
+  }
+
+  li {
+    padding-right: 5rem;
+  }
+
+  svg {
+    display: none;
+  }
   .nav-list { 
     position: relative;
     width: 32rem;
     height: 48rem;
-    background: var(--blue-ligth);
+    background: none;
     
     border: 0;
     
-    transform: translateX(100%);
+    transform: none;
   }
 
   .nav-list.active{
-    transform: translateX(-250%);
+    transform: none;
   }
 
   .content{
@@ -450,13 +466,12 @@ footer p {
   ul {
     font-family: 'Roboto Regular';
     font-size: 1.6rem;
-    margin-top: 3.5rem;
-    margin-left: 13rem;
     color: #ffff;
     text-decoration: none;
     transition: 0.3s;
     list-style: none;
-    display: block;
+    display: flex;
+    margin-top: 2rem;
   }
   
   a:hover {
@@ -472,16 +487,30 @@ footer p {
 
   nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    font-family: 'Roboto Regular';
+    justify-content: center;
   }
-  
+
+  li {
+    list-style: disc;
+  }
+
+  ul.nav-list {
+    margin: 0;
+    margin-top: 5rem;
+    padding-left: 5rem;
+    padding-bottom: 45rem;
+
+  }
+
+
+  li:nth-child(1) {
+    list-style: none;
+  } 
   
   .nav-list {
     position: relative;
-    display: flex;
-    
+    height: 0;
   }
   
   .nav-list.active{
@@ -491,6 +520,10 @@ footer p {
   .mobile-menu {
     display: none;
   }
+  a.logo {
+    display: block;
+    margin-top: 10rem;
+  }
   
   .content {
     margin: auto;
@@ -498,25 +531,22 @@ footer p {
     color: #ffffff;
     display: flex;
     flex-direction: column;
+
+    padding-bottom: 53rem;
   }
   
   .content h1 {
-    padding-top: 4rem;
-    padding-left: 3rem;
+    padding-top: ;
+    padding-left: 30rem;
     font-weight: 200;
     font-size: 6rem;
   }
   
   .content p {
     padding-top: rem;
-    padding-left: 3rem;
+    padding-left: 30rem;
     font-weight: 200;
     font-size: 2.5rem;
-  }
-  
-  
-  .circle-nav {
-    display:block; 
   }
   
   section#registration {
@@ -609,7 +639,9 @@ footer p {
     margin: auto;
     top: 0;
     height:40rem;
-  }
+
+    padding-top: 2rem;
+  } 
   
   #registration-list h2 {
    margin: 0 auto;
